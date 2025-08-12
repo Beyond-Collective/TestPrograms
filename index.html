@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.7/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@pixi/filter-rgb-split@3.1.1/dist/filter-rgb-split.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider@master/js/rgbKineticSlider.js"></script>
+
+    <title>gobeyond</title>
+    </head>
+      
+
+<body>
+    <!-- Logo  -->
+<div class="header no-follow">
+  <div class="top-nav">
+    <div class="logo"><img src="logo (2).png" alt=""></div>
+</div>
+
+</div>
+<!-- distortion effect  -->
+  <div class="slider">
+    <div id="rgbKineticSlider" class="rgbKineticSlider">
+      <nav>
+        <div class="mouse-follower main-nav next" id="mouseFollower" >
+            <span>Double Tap</span>
+          </div>
+        <a href="#" class="main-nav prev" data-nav="previous">Prev</a>
+        <a href="#" class="main-nav next" data-nav="next">Next</a>
+      </nav>
+    </div>
+  </div>
+
+
+  <!-- Waitlist Toggle Button -->
+<button class="waitlist-toggle no-follow" id="waitlistToggle">
+    <span class="text">Join Waitlist</span>
+    <span class="arrow join">➜</span>
+  </button>
+  
+  <!-- Waitlist Panel -->
+  <div class="waitlist-panel no-follow" id="waitlistPanel">
+    <button class="waitlist-close" id="waitlistClose">&times;</button>
+    <div class="waitlist-content">
+      <h2>Leave your info so we can save your spot on Beyond’s early creator list.</h2>
+      <p>Early access to campaigns – Priority to brand deals – New creator connects</p>
+      <form id="waitlistForm" class="waitlistForm">
+        <input type="email" placeholder="Email ID*" required />
+        
+        <div class="whatsapp-wrapper">
+            <div class="country-code">
+              <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="flag-icon">
+              <select name="country" id="countryCode">
+                <option value="+91">+91</option>
+                <!-- <option value="+1">+1</option>
+                <option value="+44">+44</option> -->
+                <!-- Add more country codes as needed -->
+              </select>
+            </div>
+            <input type="tel" placeholder="10-digit WhatsApp Number" class="phone-number" maxlength="10" pattern="[0-9]{10}" />
+          </div>
+          
+        <input type="text" placeholder="Instagram Link" required/>
+        <input type="text" placeholder="YouTube Link" />
+        <button type="submit" class="submit-btn">
+          <span>Submit</span> <span class="arrow">➜</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  
+
+  <!-- Bottom Bar -->
+<footer class="bottom-bar no-follow">
+    <div class="left-text">Creator Stack, Reimagined!</div>
+
+    <div class="right-text">
+    <div class="social-icons">
+      <a href="#"><img src="icons\iconmonstr-instagram-11.svg" alt="Instagram"></a>
+      <a href="#"><img src="icons\icons8-x-50.png" alt="X"></a>
+      <a href="#"><img src="icons\iconmonstr-youtube-6.svg" alt="YouTube"></a>
+      <a href="#"><img src="icons\iconmonstr-linkedin-3.svg" alt="LinkedIn"></a>
+    </div>
+    <a href="#" class="Copyright">©2025 @gobeyond Pvt. Ltd.</a>
+   </div>
+
+  </footer>
+
+  
+  <!-- <script>
+    const desktopImages = [ "s1.png", "s4.png", "s2.png", "s3.png"];
+    const mobileImages = [ "Phone and Pad Banners\\s1m.png", "Phone and Pad Banners\\s2m.png","Phone and Pad Banners\\s3m.png", "Phone and Pad Banners\\s4m.png"];
+    const PadImages = [ "Phone and Pad Banners\\ipad1.png", "Phone and Pad Banners\\ipad2.png","Phone and Pad Banners\\ipad3.png", "Phone and Pad Banners\\ipad4.png"];
+
+    const texts = [""];
+  
+    // const isMobile = window.innerWidth <= 768;
+    // const activeImages = isMobile ? mobileImages : desktopImages;
+
+    const width = window.innerWidth;
+
+    let activeImages;
+    if (width <= 768) {
+      mobileImages;
+      activeImages = mobileImages;
+    } else if (width <= 1024) {
+      PadImages;
+      activeImages = PadImages;
+    } else {
+      desktopImages;
+      activeImages = desktopImages;
+    }
+
+  
+    // mobileImages.style.background = 'cover';
+    // ✅ Declare `images` globally to avoid the library crash
+    window.images = activeImages;
+  
+    const slider = new rgbKineticSlider({
+      slideImages: activeImages,
+      itemsTitles: texts,
+  
+      backgroundDisplacementSprite: "Effect1.avif",
+      cursorDisplacementSprite: "displace-circle.png",
+  
+      cursorScaleIntensity: 0.3,
+      cursorMomentum: 0.14,
+  
+      swipe: true,
+      swipeDistance: window.innerWidth * 0.4,
+      swipeScaleIntensity: 0.5,
+  
+      slideTransitionDuration: 2,
+      transitionScaleIntensity: 30,
+      transitionScaleAmplitude: 160,
+  
+      nav: true,
+    //   navElement: "body",
+  
+      imagesRgbEffect: false,
+  
+      textsDisplay: true,
+      textTitleSize: 140,
+      textsTitleEffect: true,
+      googleFonts: ["Playfair Display:400"],
+      textsRgbEffect: true,
+      textsRgbIntensity: 3
+    });
+
+
+
+
+  </script> -->
+  
+
+
+
+
+
+<!-- 
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- image sets (use forward slashes)
+  const desktopImages = ["s1.png", "s4.png", "s2.png", "s3.png"];
+  const mobileImages  = ["Phone and Pad Banners/s1m.png", "Phone and Pad Banners/s4m.png", "Phone and Pad Banners/s2m.png", "Phone and Pad Banners/s3m.png"];
+  const tabletImages  = [ "Phone and Pad Banners\\ipad1.png", "Phone and Pad Banners\\ipad2.png","Phone and Pad Banners\\ipad3.png", "Phone and Pad Banners\\ipad4.png"];
+
+  const texts = [""];
+
+  // container + slider instance
+  const container = document.getElementById('rgbKineticSlider');
+  let sliderInstance = null;
+  let currentMode = null;
+
+  // breakpoint logic
+  function getMode() {
+    const w = window.innerWidth;
+    if (w <= 768) return 'mobile';
+    if (w <= 1024) return 'tablet';
+    return 'desktop';
+  }
+  function imagesFor(mode) {
+    if (mode === 'mobile') return mobileImages;
+    if (mode === 'tablet') return tabletImages;
+    return desktopImages;
+  }
+
+  // helper: cover-scaling for PIXI sprites (walk stage recursively)
+  function applyCoverScaling(slider) {
+    if (!slider) return;
+    const app = slider.app || slider.renderer && slider.renderer.view && slider.renderer;
+    const stage = (slider.app && slider.app.stage) || slider.stage || null;
+    if (!stage) {
+      console.warn('applyCoverScaling: cannot find PIXI stage on slider yet.');
+      return;
+    }
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    function walk(container) {
+      container.children.forEach(child => {
+        // if this child is a sprite with a texture, scale it
+        if (child.texture) {
+          // try several texture size properties (library differences)
+          const texW = (child.texture.orig && child.texture.orig.width) || child.texture.width || 1;
+          const texH = (child.texture.orig && child.texture.orig.height) || child.texture.height || 1;
+
+          // compute scale that emulates background-size: cover
+          const scale = Math.max(vw / texW, vh / texH);
+          try {
+            child.scale.set(scale);
+            // center the sprite
+            if (typeof child.width === 'number' && typeof child.height === 'number') {
+              child.x = (vw - child.width) / 2;
+              child.y = (vh - child.height) / 2;
+            }
+          } catch (e) {
+            // ignore if a child is not a Sprite
+          }
+        }
+        if (child.children && child.children.length) walk(child);
+      });
+    }
+
+    walk(stage);
+
+    // resize renderer if available
+    if (slider.app && slider.app.renderer && typeof slider.app.renderer.resize === 'function') {
+      slider.app.renderer.resize(vw, vh);
+    } else if (slider.renderer && typeof slider.renderer.resize === 'function') {
+      slider.renderer.resize(vw, vh);
+    }
+  }
+
+  // destroy slider safely (best-effort)
+  function destroySlider(slider) {
+    if (!slider) return;
+    try {
+      if (typeof slider.destroy === 'function') slider.destroy(true);
+      if (slider.app && typeof slider.app.destroy === 'function') slider.app.destroy(true);
+    } catch (e) {
+      console.warn('Error while destroying previous slider:', e);
+    }
+    // remove any canvas elements inside the container (clean slate)
+    container.querySelectorAll('canvas').forEach(c => c.remove());
+  }
+
+  // init slider for a mode
+  function initSlider(mode) {
+    const imgs = imagesFor(mode);
+    window.images = imgs; // plugin expects this
+    // cleanup previous
+    destroySlider(sliderInstance);
+
+    // recreate slider - put your original options here
+    sliderInstance = new rgbKineticSlider({
+      slideImages: imgs,
+      itemsTitles: texts,
+      backgroundDisplacementSprite: "Effect1.avif",
+      cursorDisplacementSprite: "displace-circle.png",
+      cursorScaleIntensity: 0.3,
+      cursorMomentum: 0.14,
+      swipe: true,
+      swipeDistance: window.innerWidth * 0.4,
+      swipeScaleIntensity: 0.5,
+      slideTransitionDuration: 2,
+      transitionScaleIntensity: 30,
+      transitionScaleAmplitude: 160,
+      nav: true,
+      imagesRgbEffect: false,
+      textsDisplay: true,
+      textTitleSize: 140,
+      textsTitleEffect: true,
+      googleFonts: ["Playfair Display:400"],
+      textsRgbEffect: true,
+      textsRgbIntensity: 3
+    });
+
+    // apply cover scaling after the slider had time to build PIXI objects
+    // the library sometimes creates sprites asynchronously, so try a couple times
+    let attempts = 0;
+    const tryScale = () => {
+      attempts++;
+      applyCoverScaling(sliderInstance);
+      if (attempts < 6) {
+        setTimeout(tryScale, 150); // try a few times (200-900ms total)
+      }
+    };
+    setTimeout(tryScale, 150);
+  }
+
+  // initial creation
+  currentMode = getMode();
+  initSlider(currentMode);
+
+  // handle resize (debounced). Recreate slider only if breakpoint group changes.
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const newMode = getMode();
+      if (newMode !== currentMode) {
+        currentMode = newMode;
+        initSlider(currentMode);
+      } else {
+        applyCoverScaling(sliderInstance); // just rescale sprites
+      }
+    }, 250);
+  });
+
+  // Debugging: log missing images / errors
+  console.log('Slider initialized for mode:', currentMode);
+});
+</script> -->
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Image sets (forward slashes for web paths)
+  const desktopImages = ["s1.png", "s4.png", "s2.png", "s3.png"];
+  const mobileImages  = [
+    "Phone and Pad Banners/1.png",
+    "Phone and Pad Banners/3.png",
+    "Phone and Pad Banners/2.png",
+    "Phone and Pad Banners/4.png"
+  ];
+  const tabletImages  = [
+    "Phone and Pad Banners\\ipad1.png",
+     "Phone and Pad Banners\\ipad2.png",
+     "Phone and Pad Banners\\ipad3.png", 
+     "Phone and Pad Banners\\ipad4.png"
+  ];
+
+  const texts = [""];
+
+  // Get breakpoint mode
+  function getMode() {
+    const w = window.innerWidth;
+    if (w <= 768) return "mobile";
+    if (w <= 1024) return "tablet";
+    return "desktop";
+  }
+
+  // Return images for given mode
+  function imagesFor(mode) {
+    if (mode === "mobile") return mobileImages;
+    if (mode === "tablet") return tabletImages;
+    return desktopImages;
+  }
+
+  // Scale sprites to cover
+  function scaleSpritesToCover(slider) {
+    if (!slider.app || !slider.app.stage) return;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    slider.app.stage.children.forEach(child => {
+      if (child.texture && child.texture.orig) {
+        const texW = child.texture.orig.width;
+        const texH = child.texture.orig.height;
+        const scale = Math.max(vw / texW, vh / texH);
+        child.scale.set(scale);
+        child.x = (vw - child.width) / 2;
+        child.y = (vh - child.height) / 2;
+      }
+    });
+  }
+
+  // Wait until PIXI stage exists
+  function waitForStageAndScale(slider) {
+    const check = setInterval(() => {
+      if (slider.app && slider.app.stage && slider.app.stage.children.length) {
+        clearInterval(check);
+        console.log("PIXI stage ready — applying cover scaling");
+        scaleSpritesToCover(slider);
+        slider.app.ticker.add(() => scaleSpritesToCover(slider));
+      }
+    }, 100);
+  }
+
+  // Create slider instance
+  function initSlider(mode) {
+    const activeImages = imagesFor(mode);
+    window.images = activeImages; // required by plugin
+
+    const slider = new rgbKineticSlider({
+      slideImages: activeImages,
+      itemsTitles: texts,
+      backgroundDisplacementSprite: "Effect1.avif",
+      cursorDisplacementSprite: "displace-circle.png",
+      cursorScaleIntensity: 0.3,
+      cursorMomentum: 0.14,
+      swipe: true,
+      swipeDistance: window.innerWidth * 0.4,
+      swipeScaleIntensity: 0.5,
+      slideTransitionDuration: 2,
+      transitionScaleIntensity: 30,
+      transitionScaleAmplitude: 160,
+      nav: true,
+      imagesRgbEffect: false,
+      textsDisplay: true,
+      textTitleSize: 140,
+      textsTitleEffect: true,
+      googleFonts: ["Playfair Display:400"],
+      textsRgbEffect: true,
+      textsRgbIntensity: 3
+    });
+
+    waitForStageAndScale(slider);
+
+    window.addEventListener("resize", () => {
+      scaleSpritesToCover(slider);
+    });
+
+    return slider;
+  }
+
+  // Initial load
+  let currentMode = getMode();
+  let sliderInstance = initSlider(currentMode);
+
+  // Handle breakpoint changes
+  window.addEventListener("resize", () => {
+    const newMode = getMode();
+    if (newMode !== currentMode) {
+      currentMode = newMode;
+      sliderInstance = initSlider(currentMode);
+    }
+  });
+
+});
+</script>
+
+
+
+
+<!-- 
+  <script>
+    const hamburger = document.querySelector(".hamburger-icon");
+    const loginPanel = document.getElementById("loginPanel");
+    const closePanel = document.getElementById("closePanel");
+  
+    hamburger.addEventListener("click", () => {
+      loginPanel.classList.add("open");
+    });
+  
+    closePanel.addEventListener("click", () => {
+      loginPanel.classList.remove("open");
+    });
+  
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") loginPanel.classList.remove("open");
+    });
+  </script>
+   -->
+
+  <script>
+    const toggleBtn = document.getElementById("waitlistToggle");
+    const panel = document.getElementById("waitlistPanel");
+    const panelClose = document.getElementById("waitlistClose");
+  
+    toggleBtn.addEventListener("click", () => {
+      panel.classList.toggle("active");
+      toggleBtn.classList.toggle("collapsed");
+    });
+    panelClose.addEventListener("click", () => {
+      panel.classList.remove("active");
+      toggleBtn.classList.toggle("collapsed");
+    });
+
+    
+  </script>
+<!-- 
+
+<script>
+
+const follower = document.querySelector('.mouse-follower');
+let mouseX = 0, mouseY = 0;
+let posX = 0, posY = 0;
+
+// Smooth follow animation
+function followMouse() {
+  posX += (mouseX - posX) * 0.9;
+  posY += (mouseY - posY) * 0.9;
+  follower.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+  requestAnimationFrame(followMouse);
+}
+followMouse();
+
+// Track cursor position
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX - 40;
+  mouseY = e.clientY - 40;
+});
+
+// Periodic grow animation
+setInterval(() => {
+  follower.classList.add('grow');
+  setTimeout(() => {
+    follower.classList.remove('grow');
+  }, 400);
+}, 4000);
+
+
+</script> -->
+
+
+
+<script>
+
+const follower = document.getElementById('mouseFollower');
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+// Smooth follow effect
+function animateFollower() {
+  currentX += (mouseX - currentX) * 0.1;
+  currentY += (mouseY - currentY) * 0.1;
+  follower.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+  requestAnimationFrame(animateFollower);
+}
+animateFollower();
+
+// Track mouse
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX - follower.offsetWidth / 2;
+  mouseY = e.clientY - follower.offsetHeight / 2;
+});
+
+// Pulse every 4 seconds
+setInterval(() => {
+  follower.classList.add('pulse');
+  setTimeout(() => {
+    follower.classList.remove('pulse');
+  }, 4200); // long enough for text to be read
+}, 7000);
+
+
+
+
+// Hide on unwanted areas
+document.querySelectorAll('.no-follow').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    follower.classList.add('hidden');
+  });
+
+  el.addEventListener('mouseleave', () => {
+    follower.classList.remove('hidden');
+  });
+});
+
+
+
+</script>
+
+
+
+<script>
+  let clickCount = 0;
+  let clickTimer = null;
+
+  function handleDoubleClick() {
+    const nextBtn = document.querySelector(".main-nav.next");
+    if (nextBtn) nextBtn.click(); // Triggers the same behavior as clicking "Next"
+  }
+
+  setInterval(handleDoubleClick, 9000);
+
+
+  // Desktop: double-click
+  document.addEventListener("click", () => {
+    clickCount++;
+    if (clickCount === 1) {
+      clickTimer = setTimeout(() => {
+        clickCount = 0;
+      }, 400);
+    } else if (clickCount === 2) {
+      clearTimeout(clickTimer);
+      clickCount = 0;
+      handleDoubleClick();
+    }
+  });
+
+  // Mobile: double-tap
+  document.addEventListener("touchend", () => {
+    clickCount++;
+    if (clickCount === 1) {
+      clickTimer = setTimeout(() => {
+        clickCount = 0;
+      }, 400);
+    } else if (clickCount === 2) {
+      clearTimeout(clickTimer);
+      clickCount = 0;
+      handleDoubleClick();
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

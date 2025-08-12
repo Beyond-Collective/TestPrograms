@@ -1,0 +1,492 @@
+    body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    /*----------------- slider ---------------*/
+    .slider {
+        width: 100%;
+        height: 100vh;
+        text-transform: uppercase;
+        position: relative;
+
+    }
+    .rgbKineticSlider{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+    canvas{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+    }
+
+    body img{
+        object-fit: cover !important;
+    }
+
+    nav a{
+        text-decoration: none;
+        font-weight: bold;
+        position: absolute;
+        top: 80vh;
+        z-index: 1;
+        padding: 20px 30px;
+        transition: 0.3s;
+        background: #00000067;
+        background: rgba(255, 255, 255, 0.1); /* light glassy look */
+        backdrop-filter: blur(10px);          /* glass blur effect */
+        -webkit-backdrop-filter: blur(10px);  /* Safari support */    
+        border: 1px solid #ffffff33;
+        border-radius: 50px;
+        color: #d8d8d8;
+        display: none;
+    }
+
+    nav a.next{
+        right: 5vw;
+    }
+
+    nav a.prev{
+        left: 70vw;
+    }
+
+    .header{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .top-nav {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 8px 22px;
+        border: 1px solid #ffffff33;
+        box-shadow: 0 14px 80px rgba(0, 0, 0, 0.329);
+
+    }
+    .hamburger-menu {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 10px 18px;
+        border: 1px solid #ffffff33;
+    }
+    
+    .hamburger-icon {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .bottom-bar {
+        position: absolute;
+        bottom: 0px !important;
+        width: 100%;
+        padding: 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top: 1px solid #ffffff22;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .left-text{
+        width: 40%;
+        display: flex;
+        justify-content: start;
+        margin-left: 14px;
+        /* font-size: x-large; */
+    }
+    .right-text{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .right-text a.Copyright{
+        color: #fff;
+        text-decoration: none;
+        margin: 0 3vw;
+        /* font-size: large; */
+    }
+    .social-icons  {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-icons a {
+        margin-left: 15px;
+
+    }
+    
+    .social-icons img {
+        width: 18px;
+        height: 18px;
+        filter: invert(100%);
+    }
+
+    .social-icons a:hover img {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+
+    /* === Join Waitlist Button === */
+    .waitlist-toggle {
+        position: fixed;
+        top: 46vh;
+        right: 5vw;
+        z-index: 1000;
+        background: white;
+        color: black;
+        padding: 6px 6px 6px 22px;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.496);
+    }
+
+    .join{
+        padding: 18px;
+        background-color: #B41202;
+        border-radius: 50%;
+    }
+    
+    .waitlist-toggle.collapsed .waitlist-toggle{
+        /* right: 96%; */
+        width: 64px;
+        /* padding: 6px; */
+    }
+    
+    .waitlist-toggle.collapsed  {
+        right: 96%;
+        /* width: 64px; */
+        padding: 6px;
+    }
+    
+    .waitlist-toggle.collapsed .text {
+        /* display: none; */
+    }
+    
+    .waitlistForm{
+        padding: 30px;
+
+        border-radius:60px 50px;
+        box-shadow: 0 12px 90px rgba(0, 0, 0, 0.08), 
+                0 6px 12px rgba(0, 0, 0, 0.04);
+
+    }
+    
+    /* === Waitlist Panel === */
+    .waitlist-panel {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 97%;
+        height: 100vh;
+        background: white;
+        z-index: 999;
+        transition: right 0.5s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow{
+        color: #fff;
+    }
+
+    .waitlist-panel.active {
+        right: 0;
+    }
+    
+    /* === Form Container === */
+    .waitlist-content {
+        max-width: 600px;
+        width: 100%;
+        padding: 40px 30px;
+        text-align: center;
+    }
+    
+    .waitlist-content h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .waitlist-content p {
+        font-size: 16px;
+        color: #444;
+        margin-bottom: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* === Form Elements === */
+    .waitlist-content form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .waitlist-content input {
+        padding: 16px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        outline: none;
+        transition: border 0.3s;
+    }
+    
+    .waitlist-content input:focus {
+        border-color: #B41202;
+    }
+    
+    /* === Submit Button === */
+    .waitlist-content button.submit-btn {
+        background-color: #f16161;
+        color: white;
+        padding: 16px 22px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s;
+    }
+    
+    .waitlist-content button.submit-btn:hover {
+        background-color: #B41202;
+    }
+    
+    .waitlist-content button.submit-btn .icon {
+        background: white;
+        color: #f16161;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+
+    .whatsapp-wrapper {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .country-code {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        height: 52px;
+        background: #fff;
+    }
+    
+    .country-code select {
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        margin-left: 8px;
+        outline: none;
+        appearance: none;
+        color: #000;
+        cursor: pointer;
+    }
+    
+    .flag-icon {
+        width: 24px;
+        height: 18px;
+        object-fit: contain;
+        border-radius: 3px;
+    }
+    
+    .phone-number {
+        flex: 1;
+        padding: 16px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        outline: none;
+        transition: border 0.3s;
+    }
+    
+    .phone-number:focus {
+        border-color: #B41202;
+    }
+
+
+    .waitlist-close {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        background: transparent;
+        border: none;
+        font-size: 28px;
+        color: #333;
+        cursor: pointer;
+        z-index: 1001;
+        transition: opacity 0.3s ease;
+    }
+    
+    .waitlist-close:hover {
+        opacity: 0.6;
+    }
+
+
+
+
+
+    .mouse-follower {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        /* background-image: url('Tap.png'); */
+        background: rgb(255, 255, 255);  
+        /* mix-blend-mode: difference;           invert effect */
+        color: black;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: transform 0.15s ease, width 0.5s ease, height 0.5s ease, background 0.5s ease;
+        opacity: 1;
+        overflow: hidden;
+
+    }
+    
+    .mouse-follower span {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        user-select: none;
+        font-family: sans-serif;
+    }
+    
+    .mouse-follower.pulse {
+        width: 100px;
+        height: 100px;
+        /* background: #fff; */
+        /* mix-blend-mode: normal; */
+    }
+    
+    .mouse-follower.pulse span {
+        opacity: 1;
+    }
+
+    .mouse-follower.hidden {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    
+    
+
+    /* === Responsive Styles === */
+
+    @media screen and (max-width: 52em) {
+        body{
+            overflow-x: hidden !important;
+        }
+        nav a {
+            top: auto;
+            bottom: 12rem;
+            padding: 10px 15px;
+            display: none;
+        }
+
+        nav a.prev{
+            left: 10vw;
+        }
+
+        .login-panel{
+            width: 70%;
+        }
+
+        .waitlist-panel {
+            width: 100%;
+        }
+        
+        .waitlist-toggle.collapsed {
+            right: calc(100% - 54px);
+        }
+        
+        .waitlist-content h2 {
+            font-size: 22px;
+        }
+        
+        .waitlist-content p {
+            font-size: 14px;
+        }
+
+        .bottom-bar{
+            width: 95%;
+            gap: 50px;
+        }
+
+        .left-text{
+            font-size: 16px;
+        }
+        .right-text, .left-text{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right-text a.Copyright{
+            display: none;
+        }
+
+        .mouse-follower{
+            display: none;
+        }
+    }
