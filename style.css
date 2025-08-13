@@ -1,7 +1,7 @@
    
 @font-face {
     font-family: 'GG';
-    src: url('CabinetGrotesk_Complete\\CabinetGrotesk_Complete\\Fonts\\OTF\\CabinetGrotesk-Regular.otf');
+    src: url('CabinetGrotesk-Regular.otf');
     font-style: normal;
     font-weight: normal;
 }
@@ -553,3 +553,4 @@
             display: none;
         }
     }
+
