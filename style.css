@@ -1,4 +1,19 @@
-    body{
+   
+@font-face {
+    font-family: 'GG';
+    src: url('CabinetGrotesk_Complete\\CabinetGrotesk_Complete\\Fonts\\OTF\\CabinetGrotesk-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+   
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GG';
+   }
+   
+   body{
         width: 100%;
         height: 100%;
         margin: 0;
@@ -20,7 +35,7 @@
         position: relative;
         overflow: hidden;
         width: 100% !important;
-        height: 100vh !important;
+        height: 100% !important;
     }
 
 
@@ -33,6 +48,41 @@
 
     body img{
         object-fit: cover !important;
+    }
+
+    h2{
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+    .head h2{
+        width: 100%;
+        margin: 200px auto 60px auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-family: 'GG';
+        font-size: 40px;
+        letter-spacing: 2.5px;
+    }
+
+    p{
+        font-size: 21px !important;
+        letter-spacing: 1.2px;
+    }
+
+    .para{
+        padding: 0 150px;
+    }
+    .para p.sm{
+        font-size: 21px;
+        line-height: 28px;
+        letter-spacing: 1.2px;
+    }
+
+    .para p{
+        font-family: 'GG';
+        font-size: large;
     }
 
     nav a{
@@ -225,7 +275,20 @@
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
+    }
+
+    .waitlist-panel .links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .waitlist-panel .links a{
+        text-decoration: none;
+        color: #000;
+        text-transform: capitalize;
     }
 
     .arrow{
@@ -490,4 +553,3 @@
             display: none;
         }
     }
-
